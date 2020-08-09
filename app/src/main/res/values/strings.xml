@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TugasSubmissionDicoding</string>
+    <string name="klub_name">Nama Club</string>
+    <string name="biodata">MUHAMMAD IRFI ALFAREZ\n
+    irfialfarez@gmail.com</string>
+    <string name="klub_detail">Detail Klub</string>
+    <string name="nama_club">Nama Club</string>
+    <string name="club_about">Club About</string>
+    <string name="country">Country</string>
+</resources>
