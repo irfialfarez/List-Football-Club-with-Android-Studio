@@ -1,8 +1,8 @@
 package com.dicoding.tugassubmissiondicoding
 
-class Klub (
+data class Klub (
     var name: String = "",
-    var photo: Int = 0,
-    var detail: String = "",
-    var country: String = ""
+    var photo: String = "",
+    var detail: String = ""
+
 )

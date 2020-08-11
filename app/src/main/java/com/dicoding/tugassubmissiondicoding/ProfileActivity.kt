@@ -9,20 +9,24 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         val actionbar = supportActionBar
         actionbar!!.title = "My Profile"
-        actionbar.setDisplayHomeAsUpEnabled(true)
-
 
         val imgMe: ImageView = findViewById(R.id.img_profile)
 
         Glide.with(this)
-            .load(img_profile)
+            .load(R.drawable.profile_photo)
             .apply(RequestOptions())
             .into(imgMe)
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package com.dicoding.tugassubmissiondicoding
 
+import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -19,14 +20,25 @@ class ListKlubAdapter(val listKlub: ArrayList<Klub>) : RecyclerView.Adapter<List
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val klub  = listKlub[position]
+        val (name,photo , detail) = listKlub[position]
 
         Glide.with(holder.itemView.context)
-            .load(klub.photo)
-            .apply(RequestOptions().override(55,55))
+            .load(photo)
+            .apply(RequestOptions())
             .into(holder.imgPhoto)
 
-        holder.tvName.text = klub.name
+        holder.tvName.text = name
+
+        val mContext =  holder.itemView.context
+
+        holder.itemView.setOnClickListener{
+            val moveDetail = Intent(mContext, Detail_klub::class.java)
+            moveDetail.putExtra(Detail_klub.EXTRA_NAME, name)
+            moveDetail.putExtra(Detail_klub.EXTRA_PHOTO, photo)
+            moveDetail.putExtra(Detail_klub.EXTRA_DETAIL, detail)
+            mContext.startActivity(moveDetail)
+        }
+
 
 
 
