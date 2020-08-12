@@ -1,1 +1,1 @@
-# Prototipe
+# Simple android application
