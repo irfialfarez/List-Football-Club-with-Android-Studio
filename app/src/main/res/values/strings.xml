@@ -6,6 +6,8 @@
     <string name="klub_detail">Detail Klub</string>
     <string name="nama_club">Nama Club</string>
     <string name="club_about">Club About</string>
+    <string name="sejarah">Sejarah</string>
+    <string name="league">League</string>
 
 
 </resources>

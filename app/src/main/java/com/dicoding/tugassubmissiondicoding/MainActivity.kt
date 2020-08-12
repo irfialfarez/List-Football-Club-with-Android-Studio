@@ -38,20 +38,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        setMode(item.itemId)
+        profile(item.itemId)
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setMode  (selectedMode: Int) {
-        when (selectedMode) {
-            R.id.action_about -> {
-                val iProfile = Intent(this@MainActivity, ProfileActivity::class.java)
-                startActivity(iProfile)
-            }
-
+    private fun profile(selectedMode: Int){
+        if(selectedMode == R.id.action_about){
+            movetoProfile()
         }
     }
 
+    private fun movetoProfile(){
+        val intent = Intent(this@MainActivity, ProfileActivity::class.java)
+        startActivity(intent)
+    }
 
 
 

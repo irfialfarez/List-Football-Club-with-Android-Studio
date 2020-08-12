@@ -20,7 +20,7 @@ class ListKlubAdapter(val listKlub: ArrayList<Klub>) : RecyclerView.Adapter<List
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name,photo , detail) = listKlub[position]
+        val (name,photo, detail, league) = listKlub[position]
 
         Glide.with(holder.itemView.context)
             .load(photo)
@@ -28,6 +28,7 @@ class ListKlubAdapter(val listKlub: ArrayList<Klub>) : RecyclerView.Adapter<List
             .into(holder.imgPhoto)
 
         holder.tvName.text = name
+        holder.tvLeague.text = league
 
         val mContext =  holder.itemView.context
 
@@ -39,10 +40,6 @@ class ListKlubAdapter(val listKlub: ArrayList<Klub>) : RecyclerView.Adapter<List
             mContext.startActivity(moveDetail)
         }
 
-
-
-
-
     }
 
     override fun getItemCount(): Int {
@@ -52,9 +49,10 @@ class ListKlubAdapter(val listKlub: ArrayList<Klub>) : RecyclerView.Adapter<List
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var tvName : TextView = itemView.findViewById(R.id.tv_item_name)
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-
-
+        var tvLeague: TextView = itemView.findViewById(R.id.tv_league)
     }
+
+
 
 
 }

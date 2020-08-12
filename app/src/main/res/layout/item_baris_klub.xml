@@ -41,6 +41,12 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_name"/>
+            <TextView
+                android:text="@string/league"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_league"
+                android:layout_marginLeft="8dp"/>
 
 
         </LinearLayout>
